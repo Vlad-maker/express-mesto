@@ -15,7 +15,7 @@ mongoose
     useFindAndModify: false,
   })
   .then(() => {
-    console.log("Connected to DB");
+    console.log("Подключено к БД");
   });
 
 app.use(bodyParser.json());
@@ -31,7 +31,7 @@ app.use("/", userRouter);
 app.use("/", cardsRouter);
 
 app.use((req, res) =>
-  res.status(404).send({ message: "Запрашиваемый ресурс не найден" })
+  res.status(404).send({ message: "Не найдено" })
 );
 
 app.listen(PORT);
