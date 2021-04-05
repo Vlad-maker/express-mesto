@@ -5,7 +5,6 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
 const app = express();
-
 const PORT = 3000;
 
 mongoose
@@ -15,7 +14,7 @@ mongoose
     useFindAndModify: false,
   })
   .then(() => {
-    console.log("Подключено к БД");
+    console.log("Подключено к Базе Данных");
   });
 
 app.use(bodyParser.json());
@@ -31,7 +30,7 @@ app.use("/", userRouter);
 app.use("/", cardsRouter);
 
 app.use((req, res) =>
-  res.status(404).send({ message: "Не найдено" })
+  res.status(404).send({ message: "Ресурс не найден" })
 );
 
 app.listen(PORT);
