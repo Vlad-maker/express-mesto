@@ -1,4 +1,4 @@
-# Проект Mesto фронтенд + бэкенд
+# Backend для проекта [Mesto] (https://vlad-maker.github.io/mesto/)
 
 ## Директории
 
